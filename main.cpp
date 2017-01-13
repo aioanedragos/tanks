@@ -15,7 +15,6 @@ void game_control();
 void sterge_tank(int x,int y,int dir);
 void bila_sterge_player1(int x,int y);
 void bila_player1(int x,int y,int damage);
-void alegerea_adversar();
 void meniu();
 void legenda();
 void nume_player();
@@ -63,8 +62,8 @@ void meniu()
         settextstyle(DEFAULT_FONT,HORIZ_DIR,5);
         outtextxy(400,50,"Tanks");
         settextstyle(DEFAULT_FONT,HORIZ_DIR,3);
-        outtextxy(100,150,"1 -> Start joc");
-        outtextxy(100,200,"2 -> Exit");
+        outtextxy(100,150,"1 -> start joc");
+        outtextxy(100,200,"2 -> exit");
         if(alege_meniu=='1')
         {
             tip_adversar1 = 1;
@@ -684,9 +683,9 @@ void alegerea_adversar()
     outtextxy(100,150,"cu calculator");
     while(1)
     {
-        char varza;
-        varza = getch();
-        if(varza == '1' )
+        char u;
+        u = getch();
+        if(u == '1' )
         {
             tip_adversar1 = 1;
             break;
@@ -706,8 +705,8 @@ void select_tank()
 {
     cleardevice();
     outtextxy(100 ,100 ,"alege tank 1");
-    outtextxy( 100,150 ,"tanc german(cu mai mult damage)");
-    outtextxy(100,200,"tanc rusesc(cu mai multa viata)");
+    outtextxy( 100,150 ,"tanc puternic");
+    outtextxy(100,200,"tanc cu mai multa viata");
     while(1)
     {
         char alegere_tank;
@@ -726,8 +725,8 @@ void select_tank()
     }
      cleardevice();
     outtextxy(100 ,100 ,"alege tank 2");
-    outtextxy( 100,150 ,"tanc german(cu mai mult damage)");
-    outtextxy(100,200,"tanc rusesc(cu mai multa viata)");
+    outtextxy( 100,150 ,"tanc puternic");
+    outtextxy(100,200,"tanc cu mai multa viata");
     if(tip_adversar1 == 1)
     while(1)
     {
